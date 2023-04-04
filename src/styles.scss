@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+// For Bootstrap Breakpoints
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+$font-primary: "Roboto", sans-serif;
+$font-secondary: "Poppins", sans-serif;
+
+// Colors
+$black: #000000;
+$bgblack: #202020;
+$white: #ffffff;
+$white-opacity: #ffffffd0;
+$yellow: #e8de4d;
+$green: #008000;
+$red: #fa172b;
+$red-light: #e04451;
+$gray: #e5e5e5;
+$blue: (
+  dark: #131641,
+  regular: #090979,
+  light: #2c2f55,
+);
+$orange: #ffa500;
+
+$shadow: 8px 10px 24px #0000001a;
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: $bgblack;
+}
