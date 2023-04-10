@@ -1,0 +1,50 @@
+<nav class="Navbar">
+  <div class="Navbar-content">
+    <a class="Navbar-text" routerLink="/characters">
+      <span>MARVEL</span>
+    </a>
+    <ul class="Navbar-list">
+      <li class="Navbar-item">
+        <a
+          class="Navbar-link"
+          routerLink="/characters"
+          routerLinkActive="active"
+        >
+          Characters
+        </a>
+      </li>
+      <li class="Navbar-item">
+        <a class="Navbar-link" routerLink="/comics" routerLinkActive="active">
+          Comics
+        </a>
+      </li>
+      <li class="Navbar-item">
+        <a class="Navbar-link" routerLink="/stories" routerLinkActive="active">
+          Stories
+        </a>
+      </li>
+    </ul>
+
+    <div class="Navbar-content" [ngClass]="isLogged ? 'right' : 'center'">
+      <a
+        *ngIf="isLogged"
+        routerLink="/favorites"
+        routerLinkActive="active"
+        class="Navbar-favorites"
+        >Favorites</a
+      >
+      <a
+        *ngIf="!isLogged; else logout"
+        routerLink="/login"
+        type="button"
+        class="Navbar-login"
+      >
+        Log in
+      </a>
+    </div>
+  </div>
+</nav>
+
+<ng-template #logout>
+  <button type="button" class="Navbar-login" (click)="logOut()">Log out</button>
+</ng-template>

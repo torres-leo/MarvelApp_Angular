@@ -1,0 +1,15 @@
+<article class="Card">
+  <picture>
+    <img class="Card-image" [src]="renderImage()" alt="image" />
+  </picture>
+  <div class="Card-info">
+    <h3 class="Card-name">{{ character?.name }}</h3>
+    <a
+      class="btn btn-danger Card-redirect"
+      [routerLink]="['/characters', character?.id]"
+    >
+      View Character
+      <app-icon customClass="fa-solid fa-eye"></app-icon>
+    </a>
+  </div>
+</article>
